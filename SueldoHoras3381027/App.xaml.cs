@@ -11,7 +11,7 @@ namespace SueldoHoras3381027
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new Sueldo());
+            return new Window(new Langostaahumada6439059());
         }
     }
 }
