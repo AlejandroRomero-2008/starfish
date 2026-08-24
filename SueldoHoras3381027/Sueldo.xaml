@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SueldoHoras3381027.Sueldo"
+             Background="White">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Margin="20">
+            <Label 
+            TextColor="Black"
+            Text="Sueldo"
+            FontSize="30"
+            FontFamily="Comic Sans MS"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+            <Image 
+            Source="trabajador.png" 
+            WidthRequest="300"
+            HeightRequest="300"
+            
+            />
+
+            <Entry
+                x:Name="Horas"
+            TextColor="Black"
+            FontFamily="Comic Sans MS"
+            BackgroundColor="#F0F8FF"
+            Placeholder="Pago por horas $"
+            PlaceholderColor="Black"
+            Margin="0,20,0,0"
+         />
+
+            <Entry
+                x:Name="Pagohora"
+            TextColor="Black"
+            FontFamily="Comic Sans MS"
+            BackgroundColor="#E5F0FF"
+            Placeholder="Horas trabajadas"
+            PlaceholderColor="Black"
+            Margin="0,20,0,0"
+          
+            
+          />
+
+            <Button
+                 Clicked="Button_Clicked"
+                 Text="Calcular"
+                 TextColor="White"
+                 FontFamily="Comic Sans MS"
+                 BackgroundColor="#CCE0FF"
+                 Margin="0,20,0,0"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center"
+                 CornerRadius="50"
+                 HeightRequest="100"
+                 WidthRequest="100"
+                
+            />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
