@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SueldoHoras3381027.TablasMulti10266469"
+             Title="TablasMulti10266469">
+    <ScrollView>
+        <VerticalStackLayout Padding="15" Spacing="15">
+
+            <!-- Título principal -->
+            <Label Text="Tablas de Multiplicar"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <!-- Selector de tablas -->
+            <Label Text="Selecciona las tablas que deseas ver:"
+                   FontSize="16"
+                   Margin="0,10,0,0" />
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+                <!-- CheckBox del 1 al 10 -->
+                <VerticalStackLayout>
+                    <CheckBox x:Name="chk1" />
+                    <Label Text="1" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <CheckBox x:Name="chk2" />
+                    <Label Text="2" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <CheckBox x:Name="chk3" />
+                    <Label Text="3" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <CheckBox x:Name="chk4" />
+                    <Label Text="4" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <CheckBox x:Name="chk5" />
+                    <Label Text="5" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <CheckBox x:Name="chk6" />
+                    <Label Text="6" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <CheckBox x:Name="chk7" />
+                    <Label Text="7" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <CheckBox x:Name="chk8" />
+                    <Label Text="8" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <CheckBox x:Name="chk9" />
+                    <Label Text="9" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <CheckBox x:Name="chk10" />
+                    <Label Text="10" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <!-- Botones de acción -->
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                <Button Text="Mostrar todas"
+                        Clicked="OnMostrarTodasClicked"
+                        BackgroundColor="SteelBlue"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="8" />
+                <Button Grid.Column="1"
+                        Text="Mostrar seleccionadas"
+                        Clicked="OnMostrarSeleccionadasClicked"
+                        BackgroundColor="SeaGreen"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        CornerRadius="8" />
+            </Grid>
+
+            <!-- Lista de tablas -->
+            <CollectionView x:Name="TablasCollectionView">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="0,5"
+                                Padding="15"
+                                StrokeThickness="1"
+                                Stroke="Gray"
+                                StrokeShape="RoundRectangle 10">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Titulo}"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       TextColor="DarkBlue" />
+                                <Label Text="{Binding Lineas}"
+                                       FontSize="16"
+                                       LineBreakMode="WordWrap" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
