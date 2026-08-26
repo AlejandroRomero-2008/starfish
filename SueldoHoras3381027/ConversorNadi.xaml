@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SueldoHoras3381027.ConversorNadi"
+                          BackgroundColor="#0D0F17"
+             Title="FX Exchange">
+
+    <ScrollView VerticalScrollBarVisibility="Never">
+        <VerticalStackLayout Padding="24" Spacing="25" VerticalOptions="Center">
+
+            <!-- Parte de Nadinota pro max -->
+            <VerticalStackLayout Spacing="6" HorizontalOptions="Center">
+                <Border StrokeShape="RoundRectangle 30"
+                        BackgroundColor="#1E2337"
+                        Stroke="Transparent"
+                        Padding="16,8"
+                        HorizontalOptions="Center">
+                    <Label Text="⚡ B2B FOREX CONVERTER"
+                           FontSize="12"
+                           FontAttributes="Bold"
+                           TextColor="#6C5CE7"
+                           CharacterSpacing="1.5" />
+                </Border>
+
+                <Label Text="Adquisición de Divisas"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <!-- Tarjeta Principal de Operación -->
+            <Border StrokeShape="RoundRectangle 24"
+                    Stroke="#2D3452"
+                    StrokeThickness="1"
+                    Padding="24">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#1A1F36" Offset="0.0" />
+                        <GradientStop Color="#111424" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <VerticalStackLayout Spacing="20">
+
+                    <!-- Input 1: Pesos Mexicanos (MXN) -->
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="PRESUPUESTO EN MXN" FontSize="11" TextColor="#A0A5BD" FontAttributes="Bold" />
+                        <Border StrokeShape="RoundRectangle 14" BackgroundColor="#0F121F" Stroke="#2D3452" Padding="14,4">
+                            <Grid ColumnDefinitions="*, Auto">
+                                <Entry x:Name="TxtPesos"
+                                       Placeholder="0.00"
+                                       PlaceholderColor="#4A516D"
+                                       TextColor="White"
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       Keyboard="Numeric"
+                                       VerticalOptions="Center" />
+                                <Label Grid.Column="1" Text="MXN 🇲🇽" TextColor="#A0A5BD" FontAttributes="Bold" VerticalOptions="Center"/>
+                            </Grid>
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <!-- Input 2: Tipo de Cambio -->
+                    <VerticalStackLayout Spacing="8">
+                        <Label Text="TIPO DE CAMBIO (MXN x 1 USD)" FontSize="11" TextColor="#A0A5BD" FontAttributes="Bold" />
+                        <Border StrokeShape="RoundRectangle 14" BackgroundColor="#0F121F" Stroke="#2D3452" Padding="14,4">
+                            <Grid ColumnDefinitions="*, Auto">
+                                <Entry x:Name="TxtTipoCambio"
+                                       Text="20.00"
+                                       PlaceholderColor="#4A516D"
+                                       TextColor="White"
+                                       FontSize="18"
+                                       FontAttributes="Bold"
+                                       Keyboard="Numeric"
+                                       VerticalOptions="Center" />
+                                <Label Grid.Column="1" Text="TASA" TextColor="#A0A5BD" FontAttributes="Bold" VerticalOptions="Center"/>
+                            </Grid>
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <!-- Botón de Acción Principal -->
+                    <Button x:Name="BtnCalcular"
+                            Text="CALCULAR ADQUISICIÓN"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            TextColor="White"
+                            HeightRequest="55"
+                            CornerRadius="16"
+                            Margin="0,10,0,0"
+                            Clicked="OnCalcularClicked">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#6C5CE7" Offset="0.0" />
+                                <GradientStop Color="#8E7CFF" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Tarjeta de Resultado (Hero Display) -->
+            <Border x:Name="CardResultado"
+                    StrokeShape="RoundRectangle 24"
+                    Stroke="#6C5CE7"
+                    StrokeThickness="1.5"
+                    Padding="24"
+                    Scale="0.9"
+                    Opacity="0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#1E1B4B" Offset="0.0" />
+                        <GradientStop Color="#110E2E" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
+                    <Label Text="TOTAL A RECIBIR" FontSize="12" TextColor="#8E7CFF" FontAttributes="Bold" HorizontalOptions="Center" />
+
+                    <Label x:Name="LblDolares"
+                           Text="$0.00 USD"
+                           FontSize="38"
+                           FontAttributes="Bold"
+                           TextColor="#00FFA3"
+                           HorizontalOptions="Center" />
+
+                    <Label x:Name="LblDetalle"
+                           Text="Ingresa el monto para calcular la divisa"
+                           FontSize="13"
+                           TextColor="#A0A5BD"
+                           HorizontalOptions="Center"
+                           HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
