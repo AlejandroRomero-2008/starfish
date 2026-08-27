@@ -1,3 +1,4 @@
+using System.Globalization;
 namespace SueldoHoras3381027;
 
 public partial class Langostaahumada6439059 : ContentPage

@@ -26,7 +26,7 @@
                     <Border.Shadow>
                         <Shadow Brush="Black" Offset="0,4" Radius="10" Opacity="0.3"/>
                     </Border.Shadow>
-                    <Image Source="langostalogo.jpg"
+                    <Image Source="langosta.png"
                            Aspect="AspectFit"
                            Margin="12"/>
                 </Border>

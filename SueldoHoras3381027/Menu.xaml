@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SueldoHoras3381027.Menu"
+             Title="Menu">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30"
+            Spacing="15"
+            BackgroundColor="White">
+
+            <!-- Título -->
+            <Label
+                Text="MENÚ PRINCIPAL"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#0755A5"
+                HorizontalOptions="Center"
+                Margin="0,20,0,10"/>
+
+            <Label
+                Text="Selecciona una opción"
+                FontSize="16"
+                TextColor="#555555"
+                HorizontalOptions="Center"
+                Margin="0,0,0,20"/>
+
+            <!-- Conversor NADI -->
+            <Button
+                Text="Conversor NADI"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="55"
+                Clicked="ConversorNadi_Clicked"
+                BackgroundColor="#0755A5"/>
+
+            <!-- Cuenta Regresiva -->
+            <Button
+                Text="Cuenta Regresiva"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="55"
+                Clicked="CuentaRegresiva_Clicked"
+                BackgroundColor="#0866C6"/>
+
+            <!-- Langosta Ahumada -->
+            <Button
+                Text="Langosta Ahumada"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="55"
+                Clicked="LangostaAhumada_Clicked"
+                BackgroundColor="#0755A5"/>
+
+            <!-- Números Pares -->
+            <Button
+                Text="Números Pares"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="55"
+                Clicked="NumerosPares_Clicked"
+                BackgroundColor="#0866C6"/>
+
+            <!-- Sueldo -->
+            <Button
+                Text="Sueldo"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="55"
+                Clicked="Sueldo_Clicked"
+                BackgroundColor="#0755A5"/>
+
+            <!-- Tablas Multiplicar -->
+            <Button
+                Text="Tablas de Multiplicar"
+                FontSize="18"
+                FontAttributes="Bold"
+                TextColor="White"
+                CornerRadius="12"
+                HeightRequest="55"
+                Clicked="TablasMulti_Clicked"
+                BackgroundColor="#0866C6"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
